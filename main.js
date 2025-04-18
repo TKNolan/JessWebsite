@@ -156,23 +156,27 @@ const savedLang = localStorage.getItem("lang") || "en";
 switchLanguage(savedLang);
 
 // 🔁 Event listeners + saving preference
-document.getElementById("lang-en").addEventListener("click", e => {
-  e.preventDefault();
-  localStorage.setItem("lang", "en");
-  switchLanguage("en");
-});
+document.addEventListener("DOMContentLoaded", () => {
+  // Translation buttons
+  const savedLang = localStorage.getItem("lang") || "en";
+  switchLanguage(savedLang);
 
-document.getElementById("lang-fr").addEventListener("click", e => {
-  e.preventDefault();
-  localStorage.setItem("lang", "fr");
-  switchLanguage("fr");
-});
+  const enBtn = document.getElementById("lang-en");
+  const frBtn = document.getElementById("lang-fr");
 
+  if (enBtn && frBtn) {
+    enBtn.addEventListener("click", e => {
+      e.preventDefault();
+      localStorage.setItem("lang", "en");
+      switchLanguage("en");
+    });
 
-document.getElementById("lang-fr").addEventListener("click", e => {
-  e.preventDefault();
-  localStorage.setItem("lang", "fr");
-  switchLanguage("fr");
+    frBtn.addEventListener("click", e => {
+      e.preventDefault();
+      localStorage.setItem("lang", "fr");
+      switchLanguage("fr");
+    });
+  }
 });
 
 
