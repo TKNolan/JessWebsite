@@ -8,7 +8,7 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.setPixelRatio(window.devicePixelRatio);
 
 const textureLoader = new THREE.TextureLoader();
-const mossTexture = textureLoader.load('moss.png');
+const mossTexture = textureLoader.load('Moss.png');
 const normalMap = textureLoader.load('moss-normal.png');
 
 mossTexture.wrapS = mossTexture.wrapT = THREE.RepeatWrapping;
