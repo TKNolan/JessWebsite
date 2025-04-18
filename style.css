@@ -63,6 +63,7 @@ canvas {
   transform: translate(-50%, -50%);
   font-size: 5vw;
   color: #e5dcce;
+  text-shadow: 2px 2px 4px #2a3b23;
   pointer-events: none;
   text-align: center;
 }
