@@ -11,7 +11,7 @@ body, html {
 
 .subtext {
   position: absolute;
-  top: 45%; 
+  top: 50%; 
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 3; 
@@ -58,7 +58,7 @@ canvas {
 .overlay-text {
   position: absolute;
   z-index: 2;
-  top: 30%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 5vw;
